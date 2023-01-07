@@ -14,7 +14,7 @@ export default function Show(props){
 
         <h2>Update {person.name}</h2>
         <Form action={`/update/${person._id}`} method="post">
-            <input type="input" name="name" placeholder={`${person.name}`} />
+            <input type="input" name="name" placeholder={`Ranger's name`} />
             <input type="input" name="image" placeholder="Ranger's image"/>
             <input type="input" name="title" placeholder="Ranger's title"/>
             <input type="submit" value={`Update Ranger`}/>
