@@ -1,7 +1,26 @@
+import { Form, useLoaderData } from "react-router-dom"
+
 export default function Show(props){
+
+    const person = useLoaderData()
+
     return(<>
     
-    <h1>This is the Show Component</h1>
+    <div className="person">
+
+        <h1>{person.name}</h1>
+        <h2>{person.title}</h2>
+        <img src={person.image} alt={person.name}/>
+
+        <h2>Update {person.name}</h2>
+        <Form action={`/update/${person._id}`} method="post">
+            <input type="input" name="name" placeholder={`${person.name}`} />
+            <input type="input" name="image" placeholder="Ranger's image"/>
+            <input type="input" name="title" placeholder="Ranger's title"/>
+            <input type="submit" value={`Update Ranger`}/>
+        </Form>
+
+    </div>
     
     </>)
 }
