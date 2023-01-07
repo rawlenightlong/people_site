@@ -17,7 +17,7 @@ export default function Show(props){
             <input type="input" name="name" placeholder={`Ranger's name`} />
             <input type="input" name="image" placeholder="Ranger's image"/>
             <input type="input" name="title" placeholder="Ranger's title"/>
-            <input type="submit" value={`Update Ranger`}/>
+            <input type="submit" value={`Update ${person.name}`}/>
         </Form>
 
     </div>
