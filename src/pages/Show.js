@@ -19,6 +19,10 @@ export default function Show(props){
             <input type="input" name="title" placeholder="Ranger's title"/>
             <input type="submit" value={`Update ${person.name}`}/>
         </Form>
+        <h2>Update {person.name}</h2>
+        <Form action={`/delete/${person._id}`} method="post">
+            <input type="submit" value={`Delete ${person.name}`}/>
+        </Form>
 
     </div>
     

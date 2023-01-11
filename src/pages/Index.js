@@ -10,10 +10,10 @@ export default function Index(props) {
             <input type="input" name="name" placeholder="Ranger Name" />
             <input type="input" name="image" placeholder="Ranger Picture" />
             <input type="input" name="title" placeholder="Ranger Title" />
-            <input type="submit" value="create person" />
+            <input type="submit" value="create Ranger" />
           </Form>
     
-          <h2>People</h2>
+          <h2>Rangers</h2>
           {people.map(person => (
             <div key={person._id} className="person">
               <Link to={`/${person._id}`}>
